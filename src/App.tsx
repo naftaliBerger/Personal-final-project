@@ -1,69 +1,35 @@
 import  Headers from './components/application-layout/Headers'
-import Card from './components/application-layout/Card'
+import type {Props} from './components/application-layout/Card'
+import {Card} from './components/application-layout/Card'
+// import posts from './db/db.json'
+import { useEffect, useState } from "react";
 
 import './App.css'
 
 export default function App() {
+  const [posts, setPosts] = useState<Props[]>([]);
+  useEffect(() => {
+        fetch("http://localhost:3005/posts")
+            .then((response) => response.json())
+            .then((data) => setPosts(data))
+            .catch((error) => console.error("Error fetching posts:", error));
+    }, []);
   return (
 
     <div className="container">
       <Headers />
-      <div className='cards-container'>
-        <Card
-          src={"bohemian-man-with-his-arms-crossed.jpg"}
-          name="Yossi Cohen"
-          description="A good friend of mine"
-          dete={Date()}
-        />
-        <Card
-          src={"young-bearded-man-with-striped-shirt.jpg"}
-          name="Ruth Levi"
-          description="Math teacher"
-          dete={Date()}
-        />
-        <Card
-          src={"OC3I520.jpg"}
-          name="Dani Israeli"
-          description="Hardworking student"
-          dete={Date()}
-        />
-        <Card
-          src={"OC3I520.jpg"}
-          name="Dani Israeli"
-          description="Hardworking student"
-          dete={Date()}
-        />
-        <Card
-          src={"OC3I520.jpg"}
-          name="Dani Israeli"
-          description="Hardworking student"
-          dete={Date()}
-        />
-        <Card
-          src={"OC3I520.jpg"}
-          name="Dani Israeli"
-          description="Hardworking student"
-          dete={Date()}
-        />
-        <Card
-          src={"OC3I520.jpg"}
-          name="Dani Israeli"
-          description="Hardworking student"
-          dete={Date()}
-        />
-        <Card
-          src={"OC3I520.jpg"}
-          name="Dani Israeli"
-          description="Hardworking student"
-          dete={Date()}
-        />
-        <Card
-          src={"OC3I520.jpg"}
-          name="Dani Israeli"
-          description="Hardworking student"
-          dete={Date()}
-        />
-      </div>
+      <ul>
+            {posts.map((post:Props) => (
+              
+                <Card
+                  src={post.src}
+                  name={post.name}
+                  description={post.description}
+                  date={post.date}
+                />
+              
+            ))}
+        </ul>
     </div>
     
   )

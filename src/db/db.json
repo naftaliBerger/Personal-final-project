@@ -1,0 +1,47 @@
+{
+    "posts": [
+        {
+          "src":"bohemian-man-with-his-arms-crossed.jpg",
+          "name":"Yossi Cohen",
+          "description":"A good friend of mine",
+          "dete":"Date()"
+        },
+        {
+          "src":"young-bearded-man-with-striped-shirt.jpg",
+          "name":"Ruth Levi",
+          "description":"Math teacher",
+          "dete":"Date()"
+        },
+        {
+          "src":"OC3I520.jpg",
+          "name":"Dani Israeli",
+          "description":"Hardworking student",
+          "dete":"Date()"
+        },
+        {
+          "src":"OC3I520.jpg",
+          "name":"Dani Israeli",
+          "description":"Hardworking student",
+          "dete":"Date()"
+        },
+        {
+          "src":"OC3I520.jpg",
+          "name":"Dani Israeli",
+          "description":"Hardworking student",
+          "dete":"Date()"
+        },
+        {
+          "src":"OC3I520.jpg",
+          "name":"Dani Israeli",
+          "description":"Hardworking student",
+          "dete":"Date()"
+        },
+        {
+          "src":"OC3I520.jpg",
+          "name":"Dani Israeli",
+          "description":"Hardworking student",
+          "dete":"Date()"
+        }
+    ]
+        
+}
