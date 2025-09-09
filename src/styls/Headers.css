@@ -24,3 +24,14 @@ h1{
     padding-right: 20px;
 
 }
+button{
+    margin-bottom: 23px;
+    margin-top: 23px;
+    background-color: rgb(216, 198, 151);
+    border-radius: 5px;
+    cursor: pointer;
+    border-right-width: 0px;
+    border-bottom-width: 0px;
+    border-left-width: 0px;
+    border-top-width: 0px;
+}
