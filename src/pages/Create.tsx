@@ -1,5 +1,6 @@
 import { Link} from "react-router";
 import { useState } from "react";
+import "../styls/Creation.css"
 import  Headers from '../components/application-layout/Headers'
 export default function Create() {
   const [src, setSrc] = useState("");
@@ -18,7 +19,7 @@ export default function Create() {
       const data = await response.json();
 
       if (response.ok) {
-        setMessage(<div>Registration successful! <Link to="/Login">Go to login</Link></div>);
+        setMessage("Creation successful!");
       } else {
         setMessage((data.error));
       }
@@ -33,9 +34,12 @@ export default function Create() {
         <Headers />
         <Link to="/Home"><button>Home</button></Link>
     <form onSubmit={handleCreate}>
+        <div id="inputs">
           <input type="text" placeholder="src" value={src} onChange={(e) => setSrc(e.target.value)} required />
           <input type="text" placeholder="name" value={name} onChange={(e) => setName(e.target.value)} required />
           <input type="text" placeholder="description" value={description} onChange={(e) => setDescription(e.target.value)} required />
+        </div>
+          
           <div>
             <button type="submit">submit</button>
           </div>
