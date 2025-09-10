@@ -16,7 +16,7 @@ export default function App() {
             <Route path="/Create" element={<Create />}/>
             <Route path="/Register" element={<Register />}/>
             <Route path="/Login" element={<Login />}/>
-            <Route path="/OnePost" element={<OnePost />}/>
+            <Route path="/:id" element={<OnePost />}/>
           </Routes>
   )
 }

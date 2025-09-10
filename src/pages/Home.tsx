@@ -18,16 +18,18 @@ export default function Home() {
       <Headers />
       <ul>
             {posts.map((post:Props) => (
-              
-                <Card
+              <Link to={`/${post.id}`} key={post.id}>
+                <Card 
                   src={post.src}
                   name={post.name}
                   description={post.description}
                   date={post.date}
                 />
-              
+                </Link>
+               
             ))}
         </ul>
+        
     </div>
   )
 }

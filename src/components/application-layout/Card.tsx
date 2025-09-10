@@ -1,8 +1,8 @@
 import "../../styls/Card.css";
 import { useState } from 'react';
-import { Link } from "react-router"; 
+// import { Link } from "react-router"; 
 export type Props = {
-  // id:string;
+  id?:string;
   src?: string;
   alt?: string;
   name: string;
@@ -22,8 +22,9 @@ export function Card(props: Props) {
       <div className="name">{props.name}</div>
       <p className="description">{props.description}</p>
       <p>{props.date}</p>
-      <button onClick={increment}>👍🏼 Like({count})</button>
-      <Link to="/onePost"><button>See more</button></Link>
+      <div>
+          <button onClick={increment}>👍🏼 Like({count})</button>
+      </div>
     </div>
   );
 }
