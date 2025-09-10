@@ -25,6 +25,8 @@ h1{
 
 }
 button{
+    width: 120px;
+    height: 40px;
     margin-bottom: 23px;
     margin-top: 23px;
     background-color: rgb(216, 198, 151);
@@ -34,4 +36,6 @@ button{
     border-bottom-width: 0px;
     border-left-width: 0px;
     border-top-width: 0px;
+    margin-left: 5px;
+
 }

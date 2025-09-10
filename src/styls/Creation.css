@@ -7,3 +7,13 @@ input {
     border-width: 3px;
     border-radius: 10px;
 }
+#buttons{
+    border: 5px solid rgb(187, 192, 41); 
+    border-radius: 10px;
+    margin-left: 300px;
+    margin-right: 300px;
+
+}
+/* #spacious{
+
+} */
